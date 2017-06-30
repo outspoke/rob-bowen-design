@@ -54,8 +54,8 @@ layout: default
                 {% assign slides = site.static_files | where: "slide", true %}
                 {% for slide in slides %}
                   <li class="orbit-slide{% if forloop.index == 1 %} is-active{% endif %}">
-                    <figure class="orbit-figure" style="background-image: url({{ slide.path }});">
-                      <a href="{{ slide.path }}"></a>
+                    <figure class="orbit-figure" style="background-image: url({{ slide.path | relative_url }});">
+                      <a href="{{ slide.path | relative_url }}"></a>
                     </figure>
                   </li>
                 {% endfor %}
