@@ -1,0 +1,116 @@
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.button, .button.secondary {
+  text-transform: uppercase;
+  font-weight: 400;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-width: 2px;
+  white-space: nowrap;
+  &:focus {
+    outline: none;
+  }
+}
+
+.button.secondary {
+  &:focus, &:hover {
+    color: $white;
+    border-color: $white;
+  }
+}
+
+.button-group {
+  margin-bottom: rem-calc(50);
+}
+
+.header {
+  background: url(../img/slides/slide_09.jpg) center center no-repeat;
+  background-size: cover;
+  padding-top: 40vh;
+  text-align: center;
+}
+
+.main {
+  padding: rem-calc(45);
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: rem-calc(60);
+  img {
+    max-height: rem-calc(90);
+  }
+}
+
+.new-site {
+  padding-top: rem-calc(60);
+  text-align: center;
+  h6 {
+    margin: 0;
+    font-weight: 600;
+  }
+  h2 {
+    font-weight: 200;
+    margin: 0;
+  }
+}
+
+@include breakpoint(medium) {
+  .main {
+    padding: rem-calc(50 60);
+  }
+  .logo {
+    margin-bottom: rem-calc(60);
+  }
+  .new-site {
+    padding-top: rem-calc(60);
+  }
+  .button-group {
+    margin-bottom: rem-calc(60);
+  }
+}
+
+@include breakpoint(large) {
+  .main {
+    padding: rem-calc(60 80);
+  }
+  .logo {
+    margin-bottom: rem-calc(60);
+  }
+  .new-site {
+    padding-top: rem-calc(60);
+  }
+  .button-group {
+    margin-bottom: rem-calc(60);
+  }
+}
+
+.orbit {
+  .orbit-figure {
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    img {
+      display: none;
+    }
+  }
+}
+
+.preloader {
+  background: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+
+  svg {
+    @include absolute-center;
+  }
+}
