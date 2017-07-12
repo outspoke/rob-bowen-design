@@ -9,10 +9,17 @@ h1, h2, h3, h4, h5, h6 {
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  border-width: 2px;
+  border-width: rem-calc(2);
   white-space: nowrap;
-  &:focus {
+  letter-spacing: 0.15px;
+  transition: all linear 0.1s;
+  &:focus,
+  &:hover {
+    letter-spacing: 0px;
     outline: none;
+    font-weight: $global-weight-bold;
+    border-bottom-width: rem-calc(4);
+    padding-bottom: calc(0.85em - 2px);
   }
 }
 
