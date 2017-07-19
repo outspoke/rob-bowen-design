@@ -4,16 +4,10 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 ---
-<div class="grid-y grid-padding-y header hide-for-medium">
-  <div class="cel auto">
-    <button class="button secondary view-gallery">View Gallery</button>
-  </div>
-</div>
-
 <div class="grid-y medium-grid-frame">
   <div class="cell medium-auto medium-cell-block-container">
     <div class="grid-x">
-      <div class="cell large-3 medium-4 medium-cell-block-y">
+      <div class="cell large-3 medium-4 small-order-2 medium-order-1 medium-cell-block-y">
         <div class="main">
           <div class="logo">
             <img src="{{ "/assets/img/logo.png" | relative_url }}" />
@@ -41,7 +35,7 @@ layout: default
           <div class="cell auto"></div>
         </div>
       </div>
-      <div class="cell medium-auto medium-cell-block-y show-for-medium">
+      <div class="cell medium-auto small-order-1 medium-order-2 medium-cell-block-y">
         <div class="orbit"
           data-orbit
           data-autoplay="true"
@@ -55,11 +49,12 @@ layout: default
                 {% for slide in slides %}
                   <li class="orbit-slide{% if forloop.index == 1 %} is-active{% endif %}">
                     <figure class="orbit-figure" style="background-image: url({{ slide.path | relative_url }});">
-                      <a href="{{ slide.path | relative_url }}"></a>
+                      <a class="hide-for-medium" href="{{ slide.path | relative_url }}"></a>
                     </figure>
                   </li>
                 {% endfor %}
             </ul>
+            <!-- <button class="button secondary view-gallery hide-for-medium">View Gallery</button> -->
         </div>
       </div>
     </div>

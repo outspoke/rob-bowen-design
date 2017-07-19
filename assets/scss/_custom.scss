@@ -96,18 +96,38 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Carousel
+----------- */
 .orbit {
   .orbit-figure {
-    height: 100vh;
+    height: 45vh;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    a {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
     img {
       display: none;
     }
   }
 }
 
+@include breakpoint(medium) {
+  .orbit {
+    .orbit-figure {
+      height: 100vh;
+    }
+  }
+}
+
+/* preloader
+------------ */
 .preloader {
   background: $white;
   position: fixed;
